@@ -55,10 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('c_Header.html').then(r => r.text()).then(t => {
             document.getElementById('header-placeholder').innerHTML = t;
             // Met à jour la classe active selon la page
-            const page = location.pathname.split('/').pop();
+            const page = location.pathname.split('/').pop() || 'index.html';
             document.querySelectorAll('.nav a').forEach(link => {
-                if (link.getAttribute('href') === page) link.classList.add('active');
-                else link.classList.remove('active');
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             });
         });
         fetch('c_Footer.html').then(r => r.text()).then(t => {
