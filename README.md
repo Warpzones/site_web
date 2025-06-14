@@ -9,7 +9,7 @@
 
 ## Overview
 
-This project is a modern portfolio website designed to showcase the skills, projects, and background of the website owner, Evan MICHELIS. The site features a clean and responsive design, inspired by contemporary web design trends.
+This project is a modern portfolio website designed to showcase the skills, projects, and background of the website owner, Warps. The site features a clean and responsive design, inspired by contemporary web design trends.
 
 ## Project Structure
 
@@ -77,7 +77,7 @@ This project is open source under the Open Source License. See the LICENSE file 
 
 ## Présentation
 
-Ce projet est un site web de portfolio moderne conçu pour présenter les compétences, les projets et le parcours d’Evan MICHELIS. Le site propose un design épuré et responsive, inspiré des tendances actuelles du web.
+Ce projet est un site web de portfolio moderne conçu pour présenter les compétences, les projets et le parcours d’Warps. Le site propose un design épuré et responsive, inspiré des tendances actuelles du web.
 
 ## Structure du projet
 
