@@ -1,7 +1,7 @@
 # Modern Portfolio Site
 
 > **Traduction française en bas de page**  
-> *This project is open source. English version above, French version below (translated with an online translator).*
+> *The French version below is a translation of the English version above (translated with an online translator).*
 
 ---
 
