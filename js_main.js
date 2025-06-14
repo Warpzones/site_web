@@ -49,4 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Error loading projects:', error));
     }
+
+    // Inclusion dynamique du header et du footer
+    window.addEventListener('DOMContentLoaded', function() {
+        fetch('c_Header.html').then(r => r.text()).then(t => {
+            document.getElementById('header-placeholder').innerHTML = t;
+            // Met à jour la classe active selon la page
+            const page = location.pathname.split('/').pop();
+            document.querySelectorAll('.nav a').forEach(link => {
+                if (link.getAttribute('href') === page) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+        });
+        fetch('c_Footer.html').then(r => r.text()).then(t => {
+            document.getElementById('footer-placeholder').innerHTML = t;
+        });
+    });
 });
