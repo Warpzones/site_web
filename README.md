@@ -5,6 +5,8 @@
 
 ---
 
+## The english version is translated with an online translator
+
 ## Overview
 
 This project is a modern portfolio website designed to showcase the skills, projects, and background of the website owner, Evan MICHELIS. The site features a clean and responsive design, inspired by contemporary web design trends.
@@ -65,15 +67,13 @@ site_web
 
 ## License
 
-This project is open source under the MIT License. See the LICENSE file for details.
+This project is open source under the Open Source License. See the LICENSE file for details.
 
 ---
 
 ---
 
 # Site Web Portfolio Moderne
-
-> **Traduction française (réalisée à l’aide d’un traducteur en ligne)**
 
 ## Présentation
 
@@ -135,4 +135,4 @@ site_web
 
 ## Licence
 
-Ce projet est open source sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+Ce projet est open source sous licence Open Source. Voir le fichier LICENSE pour plus de détails.
