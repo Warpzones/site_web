@@ -7,25 +7,24 @@ This project is a modern portfolio website designed to showcase the skills, proj
 The project is organized as follows:
 
 ```
-modern-portfolio-site
-├── src
-│   ├── assets
-│   │   └── fonts
-│   ├── components
-│   │   ├── Header.html
-│   │   ├── Footer.html
-│   │   └── Sidebar.html
-│   ├── pages
-│   │   ├── index.html
-│   │   ├── about.html
-│   │   ├── projects.html
-│   │   ├── cv.html
-│   │   └── contact.html
-│   ├── styles
-│   │   ├── main.css
-│   │   └── variables.css
-│   └── scripts
-│       └── main.js
+Mon_site_web
+├── assets
+│   └── fonts
+├── components
+│   ├── Header.html
+│   ├── Footer.html
+│   └── Sidebar.html
+├── pages
+│   ├── index.html
+│   ├── about.html
+│   ├── projects.html
+│   ├── cv.html
+│   └── contact.html
+├── styles
+│   ├── main.css
+│   └── variables.css
+├── scripts
+│   └── main.js
 ├── package.json
 └── README.md
 ```
