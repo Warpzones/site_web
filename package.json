@@ -1,0 +1,30 @@
+{
+  "name": "modern-portfolio-site",
+  "version": "1.0.0",
+  "description": "A modern portfolio website showcasing skills, projects, and contact information.",
+  "main": "src/scripts/main.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'",
+    "test": "echo 'No tests defined.'"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "modern",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Evan MICHELIS",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://your-portfolio-url.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/modern-portfolio-site.git"
+  }
+}

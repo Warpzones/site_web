@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #3498db; /* Example primary color */
+    --secondary-color: #2ecc71; /* Example secondary color */
+    --accent-color: #e74c3c; /* Example accent color */
+    --background-color: #ecf0f1; /* Example background color */
+    --text-color: #2c3e50; /* Example text color */
+    --font-family: 'Montserrat', sans-serif; /* Font family */
+    --font-size-base: 16px; /* Base font size */
+    --font-size-large: 1.25rem; /* Large font size */
+    --font-size-small: 0.875rem; /* Small font size */
+    --border-radius: 5px; /* Border radius for buttons and inputs */
+    --transition-speed: 0.3s; /* Transition speed for hover effects */
+}
