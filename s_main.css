@@ -150,6 +150,78 @@ footer {
     margin-top: 2rem;
 }
 
+.projects-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.16);
+}
+
+.project-thumb {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f6fa;
+}
+
+.project-thumb img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.project-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: #3498db;
+}
+
+.project-link {
+    margin-top: 1rem;
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.project-link:hover {
+    background: #2ecc71;
+}
+
 @media (max-width: 900px) {
     .sidebar {
         display: none;
