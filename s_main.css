@@ -11,17 +11,22 @@ header {
     background: #3498db;
     color: #fff;
     padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.nav {
     display: flex;
     align-items: center;
 }
@@ -81,8 +86,12 @@ header {
 }
 
 .main-content {
-    margin-left: 25px;
+    margin-left: 0;
     padding: 2rem;
+}
+
+.main-content.with-sidebar {
+    margin-left: 220px; /* ou la largeur de ta sidebar */
 }
 
 .welcome {
