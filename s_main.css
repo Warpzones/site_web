@@ -304,6 +304,34 @@ footer {
     color: #fff;
 }
 
+/* Affiche la grille colorée uniquement sur PC, la liste simple sur mobile */
+.only-desktop { display: block; }
+.only-mobile { display: none; }
+
+@media (max-width: 900px) {
+    .only-desktop { display: none !important; }
+    .only-mobile { display: block !important; }
+}
+
+/* Style pour la liste simple sur mobile */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+.projects-list .project-card {
+    background: #f4f6fa;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 1.2rem;
+    color: #23262f;
+}
+body.dark-mode .projects-list .project-card {
+    background: #23262f;
+    color: #f1f3f7;
+}
+
 /* Bouton thème */
 .theme-toggle-btn {
     background: none;
@@ -446,27 +474,66 @@ body.dark-mode .theme-toggle-btn:hover {
 }
 
 @media (max-width: 700px) {
-    .nav ul {
-        flex-direction: column;
-        background: #3498db;
-        position: static;
-        width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-        padding: 0.5rem 0;
-        display: flex !important; /* Toujours visible */
-        align-items: stretch;
-    }
     .header {
         flex-direction: column;
         align-items: stretch;
         padding: 0.5rem 0.5rem;
+        background: #3498db;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    }
+    .logo {
+        justify-content: center;
+        margin: 0 0 0.5rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        background: #3498db;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+        padding: 0.5rem 0;
+        gap: 0.2rem;
+        width: 100%;
+        margin: 0;
+    }
+    .nav ul li {
+        text-align: center;
+        margin: 0.2rem 0;
+    }
+    .nav ul li a {
+        display: block;
+        padding: 0.7rem 0;
+        font-size: 1.1rem;
+        color: #fff;
+        border-radius: 8px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .nav ul li a.active,
+    .nav ul li a:hover {
+        background: #2ecc71;
+        color: #23262f;
     }
     .header-actions {
         justify-content: center;
         margin: 0.5rem 0 0 0;
+        gap: 0.5rem;
     }
-    .menu-toggle-btn {
-        display: none !important;
+    .theme-toggle-btn,
+    .lang-toggle-btn {
+        font-size: 1.2rem;
+        padding: 0.3em 0.7em;
+        color: #fff;
+        background: #3498db;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin: 0 0.2rem;
+    }
+    .theme-toggle-btn:hover,
+    .lang-toggle-btn:hover {
+        background: #2ecc71;
+        color: #23262f;
+        border-color: #2ecc71;
     }
 }
