@@ -8,6 +8,9 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;      /* Centre verticalement tous les enfants */
+    justify-content: space-between; /* Espace entre logo/nav et actions */
     background: #3498db;
     color: #fff;
     padding: 1rem 2rem;
@@ -16,8 +19,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 100;
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;   /* Ajoute cette ligne pour éviter les débordements */
 }
 
 .logo {
@@ -29,6 +31,7 @@ header {
 .nav {
     display: flex;
     align-items: center;
+    flex: 1 1 auto;
 }
 
 .nav ul {
@@ -49,6 +52,29 @@ header {
 .nav a.active,
 .nav a:hover {
     color: #2ecc71;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1.5rem; /* Ajoute un petit espace à gauche */
+}
+
+.theme-toggle-btn, .lang-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 50%;
+    padding: 0.3em 0.7em;
+}
+
+.theme-toggle-btn:hover, .lang-toggle-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: #ffe066;
 }
 
 .sidebar {
@@ -265,6 +291,31 @@ footer {
 .theme-toggle-btn:hover {
     background: rgba(255,255,255,0.12);
     color: #ffe066;
+}
+
+/* Bouton langue */
+.lang-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: #fff;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 50%;
+    padding: 0.3em 0.7em;
+}
+.lang-toggle-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: #3498db;
+}
+body.dark-mode .lang-toggle-btn {
+    color: #ffe066;
+    background: rgba(255,255,255,0.08);
+}
+body.dark-mode .lang-toggle-btn:hover {
+    background: #ffe066;
+    color: #23262f;
 }
 
 /* Mode sombre amélioré */
