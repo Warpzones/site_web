@@ -54,6 +54,23 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('DOMContentLoaded', function() {
         fetch('c_Header.html').then(r => r.text()).then(t => {
             document.getElementById('header-placeholder').innerHTML = t;
+
+            // Thème sombre/clair
+            function setTheme(dark) {
+                document.body.classList.toggle('dark-mode', dark);
+                const icon = document.getElementById('theme-icon');
+                if (icon) icon.textContent = dark ? '☀️' : '🌙';
+                localStorage.setItem('dark-mode', dark ? '1' : '0');
+            }
+            // Applique le thème au chargement
+            setTheme(localStorage.getItem('dark-mode') === '1');
+            // Gestion du bouton
+            const btn = document.getElementById('theme-toggle');
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    setTheme(!document.body.classList.contains('dark-mode'));
+                });
+            }
             // Met à jour la classe active selon la page
             const page = location.pathname.split('/').pop() || 'index.html';
             document.querySelectorAll('.nav a').forEach(link => {
@@ -64,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
         fetch('c_Footer.html').then(r => r.text()).then(t => {
             document.getElementById('footer-placeholder').innerHTML = t;
         });

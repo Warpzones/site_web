@@ -250,6 +250,84 @@ footer {
     background: #2ecc71;
 }
 
+/* Bouton thème */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    color: #fff;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 50%;
+    padding: 0.3em 0.5em;
+}
+.theme-toggle-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: #ffe066;
+}
+
+/* Mode sombre amélioré */
+body.dark-mode {
+    background: #181a20;
+    color: #f1f3f7;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: #23262f;
+    color: #f1f3f7;
+}
+
+body.dark-mode .main-content,
+body.dark-mode .projects-square,
+body.dark-mode .project-card {
+    background: #23262f;
+    color: #f1f3f7;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .welcome {
+    background: #23262f;
+    color: #f1f3f7;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    border-radius: 18px;
+}
+
+body.dark-mode .project-info h2 {
+    color: #7ecfff;
+}
+
+body.dark-mode .project-info p {
+    color: #f1f3f7;
+}
+
+body.dark-mode .project-card {
+    background: #23262f;
+    color: #f1f3f7;
+}
+
+body.dark-mode .project-link,
+body.dark-mode .btn {
+    background: #7ecfff;
+    color: #23262f;
+}
+
+body.dark-mode .project-link:hover,
+body.dark-mode .btn:hover {
+    background: #ffe066;
+    color: #23262f;
+}
+
+body.dark-mode .theme-toggle-btn {
+    color: #ffe066;
+    background: rgba(255,255,255,0.08);
+}
+body.dark-mode .theme-toggle-btn:hover {
+    background: #ffe066;
+    color: #23262f;
+}
+
 @media (max-width: 900px) {
     .sidebar {
         display: none;
