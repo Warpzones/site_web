@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #f4f6fa;
+    background: repeating-linear-gradient(0deg, #f4f6fa 0px, #f4f6fa 39px, #e9ecef 40px);
     color: #2c3e50;
     margin: 0;
     padding: 0;
@@ -184,7 +184,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.projects-wrapper {
+.projects-center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,8 +200,18 @@ footer {
     border-radius: 32px;
     box-shadow: 0 8px 32px rgba(44,62,80,0.10);
     padding: 2.5rem;
-    max-width: 900px;
+    max-width: 800px;
     width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -210,70 +220,71 @@ footer {
         grid-template-rows: none;
         padding: 1rem;
     }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 140px;
+        padding: 1rem;
+    }
+    .project-card.big, .project-card.wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 120px;
+    }
+    .project-card.big, .project-card.wide {
+        grid-column: span 1;
+    }
 }
 
 .project-card {
-    background: #f4f6fa;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    border-radius: 28px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+    padding: 1.5rem;
+    color: #fff;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(44,62,80,0.16);
-}
-
-.project-thumb {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background: #e3e9f7;
-    border-radius: 16px;
+    align-items: flex-start;
+    position: relative;
     overflow: hidden;
 }
 
-.project-thumb img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 12px;
+.project-card.big {
+    grid-column: span 2;
+    grid-row: span 2;
+    font-size: 1.4rem;
 }
 
-.project-info h2 {
-    margin: 0.5rem 0 0.5rem 0;
-    font-size: 1.2rem;
-    color: #3498db;
-    text-align: center;
+.project-card.wide {
+    grid-column: span 2;
 }
 
-.project-info p {
-    font-size: 1rem;
-    color: #2c3e50;
-    text-align: center;
-}
+.project-card.pink { background: #ff5ca7; }
+.project-card.blue { background: #5caaff; }
+.project-card.green { background: #5cffb1; color: #23262f; }
+.project-card.yellow { background: #ffe066; color: #23262f; }
 
 .project-link {
     margin-top: 1rem;
     display: inline-block;
-    background: #3498db;
-    color: #fff;
+    background: #fff;
+    color: #23262f;
     padding: 0.5rem 1.2rem;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
 }
 
 .project-link:hover {
-    background: #2ecc71;
+    background: #23262f;
+    color: #fff;
 }
 
 /* Bouton thème */
@@ -320,7 +331,7 @@ body.dark-mode .lang-toggle-btn:hover {
 
 /* Mode sombre amélioré */
 body.dark-mode {
-    background: #181a20;
+    background: repeating-linear-gradient(0deg, #23262f 0px, #23262f 39px, #181a20 40px);
     color: #f1f3f7;
 }
 
@@ -354,18 +365,21 @@ body.dark-mode .project-info p {
 }
 
 body.dark-mode .project-card {
-    background: #23262f;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     color: #f1f3f7;
 }
 
-body.dark-mode .project-link,
-body.dark-mode .btn {
-    background: #7ecfff;
-    color: #23262f;
+body.dark-mode .project-card.pink    { background: #c23e7b; }
+body.dark-mode .project-card.blue    { background: #2d5c8a; }
+body.dark-mode .project-card.green   { background: #2e8a6d; color: #e6fff7; }
+body.dark-mode .project-card.yellow  { background: #bfae3c; color: #23262f; }
+
+body.dark-mode .project-link {
+    background: #23262f;
+    color: #ffe066;
 }
 
-body.dark-mode .project-link:hover,
-body.dark-mode .btn:hover {
+body.dark-mode .project-link:hover {
     background: #ffe066;
     color: #23262f;
 }

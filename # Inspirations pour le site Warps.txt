@@ -1,0 +1,6 @@
+# Inspirations pour le site Warps
+
+- [aywen.fr](https://aywen.fr/) : inspiration principale pour la page projets (grille colorée, blocs de tailles variées, style moderne)
+- [warpzones.github.io/Quizz/](https://warpzones.github.io/Quizz/) : projet personnel à mettre en avant
+- [Google Fonts Montserrat](https://fonts.google.com/specimen/Montserrat) : police principale du site
+- [Open source portfolio templates](https://github.com/topics/portfolio-template) : pour la structure générale
